@@ -68,15 +68,10 @@ gulp.task('pl-sass', function(){
         .pipe(sourcemaps.init())
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.resolve(paths().source.css)));
+        .pipe(gulp.dest(path.resolve(paths().public.css)));
 });
 
-// CSS Copy
-gulp.task('pl-copy:css', function () {
-    return gulp.src(normalizePath(paths().source.css) + '/*.css')
-        .pipe(gulp.dest(normalizePath(paths().public.css)))
-        .pipe(browserSync.stream());
-});
+
 
 // Styleguide Copy everything but css
 gulp.task('pl-copy:styleguide', function () {
@@ -134,7 +129,7 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:img',
     'pl-copy:favicon',
     'pl-copy:font',
-    gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
+    gulp.series('pl-sass', function(done){done();}),
     'pl-copy:styleguide',
     'pl-copy:styleguide-css'
 ));
@@ -214,7 +209,7 @@ function watch() {
             name: 'CSS',
             paths: [normalizePath(paths().source.css, '**', '*.css')],
             config: { awaitWriteFinish: true },
-            tasks: gulp.series('pl-copy:css', reloadCSS)
+            tasks: gulp.series(reloadCSS)
         },
         {
             name: 'Styleguide Files',
