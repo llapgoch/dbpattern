@@ -64,9 +64,9 @@ var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('pl-sass', function(){
     return gulp
-        .src(path.resolve(paths().source.scss, '**/*.scss'))
+        .src(paths().source.scssmain)
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass.sync().on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.resolve(paths().source.css)));
 });

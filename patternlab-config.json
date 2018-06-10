@@ -12,7 +12,8 @@
       "images" : "./source/images",
       "fonts" : "./source/fonts",
       "css" : "./source/css/",
-      "scss" : "./source/css/scss"
+      "scss" : "./source/css/scss",
+      "scssmain": "./source/css/style.scss"
     },
     "public" : {
       "root" : "./public/",
