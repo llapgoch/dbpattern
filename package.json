@@ -1,0 +1,22 @@
+{
+  "name": "dbpattern",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "run watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/llapgoch/dbpattern.git"
+  },
+  "keywords": [
+    "pattern"
+  ],
+  "author": "Dave Baker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/llapgoch/dbpattern/issues"
+  },
+  "homepage": "https://github.com/llapgoch/dbpattern#readme"
+}
