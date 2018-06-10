@@ -223,8 +223,8 @@
  */
 .icon-play-box:before {
 	padding: $pad-quarter;
-	background: $color-gray-50;
-	color: $color-white;
+	background: color(neutral, grey50);
+	color: color(neutral, white);
 	margin-left: -1.7rem;
 	margin-right: $pad-half;
 }

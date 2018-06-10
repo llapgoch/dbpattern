@@ -94,28 +94,28 @@
  * Show valid text color
  */
 .valid {
-	color: $color-utility-positive;
+	color: color(utility, positive);
 }
 
 /**
  * Show error text color
  */
 .error {
-	color: $color-utility-negative;
+	color: color(utility, negative);
 }
 
 /**
  * Show warning text color
  */
 .warning {
-    color: $color-utility-caution;
+    color: color(utility, negative);
 }
 
 /**
  * Show informational text color
  */
 .information {
-    color: $color-utility-neutral;
+    color: color(utility, neutral);
 }
 
 /**

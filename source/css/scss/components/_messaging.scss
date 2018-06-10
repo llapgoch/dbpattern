@@ -8,7 +8,7 @@
 .alert {
 	text-align: center;
 	padding: 0 1rem;
-	background: $color-gray-02;
+	background: color(neutral, grey);
 	overflow: hidden;
 	font-size: 1em;
 	animation: slideDown 2s forwards;
@@ -23,32 +23,32 @@
  * Error alert
  */
 .alert--error {
-	color: $color-utility-negative;
-	background: $color-utility-negative-subtle;
+	color: color(utility, negative);
+	background: color(utility, negative)-subtle;
 }
 
 /**
  * Success alert
  */
 .alert--success {
-	color: $color-utility-positive;
-	background: $color-utility-postitive-subtle;
+	color: color(utility, positive);
+	background: color(utility, positive);
 }
 
 /**
  * Warning alert
  */
 .alert--warning {
-	color: $color-utility-caution;
-	background: $color-utility-caution-subtle;
+	color: color(utility, negative);
+	background: color(utility, negative)-subtle;
 }
 
 /**
  * Info alert
  */
 .alert--info {
-	color: $color-utility-neutral;
-	background: $color-utility-neutral-subtle;
+	color: color(utility, neutral);
+	background: color(utility, neutral)-subtle;
 }
 
 /**
@@ -110,6 +110,6 @@
  */
  .c-overlay__intro {
 	 font-size: 1.5rem;
-	 color: $color-white;
+	 color: color(neutral, white);
  }
  

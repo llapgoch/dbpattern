@@ -33,8 +33,8 @@
  * 1) This sits overtop of the hero image when space permits
  */
 .c-block-hero__headline {
-    background: $color-dim-50;
-    color: $color-white;
+    background: color(neutral, dim50);
+    color: color(neutral, white);
     padding: 1rem;
     font-size: 2.6rem;
     transition: all $anim-speed-quick $anim-ease;
@@ -48,7 +48,7 @@
     }
 
     .c-block-hero:hover &, .c-block-hero:focus & {
-        background: $color-gray-73;
+        background: color(neutral, grey73);
     }
  }
 
@@ -71,7 +71,7 @@
 
 	&:hover, &:focus {
 		.c-block-media__headline {
-			color: $color-brand-green;
+			color: color(primary, blue);
 		}
 	}
 
@@ -106,7 +106,7 @@
 
 .c-block-media__headline {
 	margin-bottom: 0.2em;
-	color: $color-gray-65;
+	color: color(neutral, 65);
 	transition: all $anim-speed-quick $anim-ease;
 
 	.c-block-media--small & {
@@ -122,7 +122,7 @@
 }
 
 .c-block-media__excerpt {
-	color: $color-gray-35;
+	color: color(neutral, grey35);
 	transition: all $anim-speed-quick $anim-ease;
 
 	.c-block-media--small & {
@@ -163,8 +163,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: $color-dim-50;
-    color: $color-white;
+    background: color(neutral, dim50);
+    color: color(neutral, white);
     padding: $pad-half;
     font-size: 1.4rem;
     transition: all $anim-speed-quick $anim-ease;
@@ -189,8 +189,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: $color-dim-50;
-    color: $color-white;
+    background: color(neutral, dim50);
+    color: color(neutral, white);
     border-radius: $border-radius;
     padding: 1em 1em;
     text-align: center;
@@ -198,8 +198,8 @@
     transition: all $anim-speed-quick $anim-ease;
 
     &:hover, &:focus {
-        background: $color-dim-70;
-        color: $color-white;
+        background: color(neutral, dim70);
+        color: color(neutral, white);
     }
 
     @media all and (min-width: 55rem) {
@@ -238,7 +238,7 @@
 }
 
 .c-block-tile__label {
-    color: $color-gray-15;
+    color: color(neutral, grey15);
     font-weight: normal;
     font-size: $font-size-med;
 }

@@ -8,8 +8,8 @@
 .c-footer {
 	clear: both;
 	overflow: hidden;
-	background: $color-brand-green-dark;
-	color: $color-white;
+	background: color(primary, green);
+	color: color(neutral, white);
 	line-height: 1.2;
 	padding: 1em 0;
 }
@@ -21,7 +21,7 @@
 	max-width: 40em;
 	
 	a {
-		color: $color-gray-15;
+		color: color(neutral, grey15);
 		text-decoration: underline;
 		
 		&:hover, &:focus {
