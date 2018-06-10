@@ -76,8 +76,8 @@ gulp.task('pl-sass', function(){
 // Styleguide Copy everything but css
 gulp.task('pl-copy:styleguide', function () {
     return gulp.src(normalizePath(paths().source.styleguide) + '/**/!(*.css)')
-        .pipe(gulp.dest(normalizePath(paths().public.root)))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(normalizePath(paths().public.root)));
+        // .pipe(browserSync.stream());
 });
 
 // Styleguide Copy and flatten css
@@ -87,8 +87,8 @@ gulp.task('pl-copy:styleguide-css', function () {
             //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
             file.path = path.join(file.base, path.basename(file.path));
             return normalizePath(path.join(paths().public.styleguide, '/css'));
-        }))
-        .pipe(browserSync.stream());
+        }));
+        // .pipe(browserSync.stream());
 });
 
 /******************************************************
@@ -184,8 +184,8 @@ function getTemplateWatches() {
  * Note: Exits more reliably when used with a done callback.
  */
 function reload(done) {
-    browserSync.reload();
-    done();
+    // browserSync.reload();
+    // done();
 }
 
 /**
@@ -193,8 +193,8 @@ function reload(done) {
  * Note: Exits more reliably when used with a done callback.
  */
 function reloadCSS(done) {
-    browserSync.reload('*.css');
-    done();
+    // browserSync.reload('*.css');
+    // done();
 }
 
 function watch() {
@@ -243,35 +243,36 @@ function watch() {
 }
 
 gulp.task('patternlab:connect', gulp.series(function (done) {
-    browserSync.init({
-        server: {
-            baseDir: normalizePath(paths().public.root)
-        },
-        snippetOptions: {
-            // Ignore all HTML files within the templates folder
-            blacklist: ['/index.html', '/', '/?*']
-        },
-        notify: {
-            styles: [
-                'display: none',
-                'padding: 15px',
-                'font-family: sans-serif',
-                'position: fixed',
-                'font-size: 1em',
-                'z-index: 9999',
-                'bottom: 0px',
-                'right: 0px',
-                'border-top-left-radius: 5px',
-                'background-color: #1B2032',
-                'opacity: 0.4',
-                'margin: 0',
-                'color: white',
-                'text-align: center'
-            ]
-        }
-    }, function () {
-        done();
-    });
+    // browserSync.init({
+    //     server: {
+    //         baseDir: normalizePath(paths().public.root)
+    //     },
+    //     snippetOptions: {
+    //         // Ignore all HTML files within the templates folder
+    //         blacklist: ['/index.html', '/', '/?*']
+    //     },
+    //     notify: {
+    //         styles: [
+    //             'display: none',
+    //             'padding: 15px',
+    //             'font-family: sans-serif',
+    //             'position: fixed',
+    //             'font-size: 1em',
+    //             'z-index: 9999',
+    //             'bottom: 0px',
+    //             'right: 0px',
+    //             'border-top-left-radius: 5px',
+    //             'background-color: #1B2032',
+    //             'opacity: 0.4',
+    //             'margin: 0',
+    //             'color: white',
+    //             'text-align: center'
+    //         ]
+    //     }
+    // }, function () {
+    //     done();
+    // });
+    done();
 }));
 
 /******************************************************
